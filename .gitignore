@@ -1,0 +1,33 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+
+# IDE
+.vscode/
+.idea/
+*.user
+
+# Test results
+[Tt]est[Rr]esult*/
+CodeCoverage/
+coverage-report/
+
+# Scraps
+.temp/
+.claude/
+*.binlog

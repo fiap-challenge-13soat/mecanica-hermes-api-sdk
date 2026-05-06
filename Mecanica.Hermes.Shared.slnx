@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Mecanica.Hermes.Contracts/Mecanica.Hermes.Contracts.csproj" />
+    <Project Path="src/Mecanica.Hermes.Shared.Application/Mecanica.Hermes.Shared.Application.csproj" />
+    <Project Path="src/Mecanica.Hermes.Shared.AspNetCore/Mecanica.Hermes.Shared.AspNetCore.csproj" />
+    <Project Path="src/Mecanica.Hermes.Shared.Core/Mecanica.Hermes.Shared.Core.csproj" />
+    <Project Path="src/Mecanica.Hermes.Shared.MassTransit/Mecanica.Hermes.Shared.MassTransit.csproj" />
+    <Project Path="src/Mecanica.Hermes.Shared.Observability/Mecanica.Hermes.Shared.Observability.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Mecanica.Hermes.Shared.Tests/Mecanica.Hermes.Shared.Tests.csproj" />
+  </Folder>
+</Solution>

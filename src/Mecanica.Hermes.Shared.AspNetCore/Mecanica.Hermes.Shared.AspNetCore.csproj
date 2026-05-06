@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>Mecanica.Hermes.Shared.AspNetCore</PackageId>
+        <Description>Middlewares, filters e conventions ASP.NET Core: CorrelationId, GlobalExceptionHandler, ValidationFilter, ApiProblemDetails, EndpointConventions, HealthCheckTags.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" />
+        <PackageReference Include="Serilog" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Mecanica.Hermes.Shared.Core\Mecanica.Hermes.Shared.Core.csproj" />
+    </ItemGroup>
+</Project>

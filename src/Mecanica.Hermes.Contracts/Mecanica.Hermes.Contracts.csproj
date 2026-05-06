@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>Mecanica.Hermes.Contracts</PackageId>
+        <Description>Contratos cross-service (integration events) versionados via [EntityName].vN. Pacote leve, só com MassTransit.Abstractions para o atributo.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MassTransit.Abstractions" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    </ItemGroup>
+</Project>

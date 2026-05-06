@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>Mecanica.Hermes.Shared.Core</PackageId>
+        <Description>Core abstractions sem dependências externas: Result&lt;T&gt;, BaseDomain, AggregateRoot, IDomainEvent, IUnitOfWork, PaginationParams.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    </ItemGroup>
+</Project>

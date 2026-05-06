@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>Mecanica.Hermes.Shared.Application</PackageId>
+        <Description>Padrões de Application layer: AsyncCommandHandler, IAsyncCommand, IAsyncMessagePublisher, LoggingBehavior (MediatR pipeline).</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MediatR" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Mecanica.Hermes.Shared.Core\Mecanica.Hermes.Shared.Core.csproj" />
+    </ItemGroup>
+</Project>
