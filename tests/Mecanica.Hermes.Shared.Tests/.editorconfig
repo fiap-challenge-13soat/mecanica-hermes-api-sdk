@@ -1,0 +1,3 @@
+[*.cs]
+# Underscores em nomes de teste são idiomáticos (Metodo_Cenario_Resultado)
+dotnet_diagnostic.CA1707.severity = none
