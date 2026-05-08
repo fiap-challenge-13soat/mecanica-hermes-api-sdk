@@ -55,7 +55,8 @@ public class LoggingBehaviorTests
             CancellationToken.None);
 
         logger.Entries.Should().Contain(e => e.Level == LogLevel.Information);
-        logger.Entries.Should().Contain(e => e.Level == LogLevel.Debug && e.Message.Contains("Success", StringComparison.Ordinal));
+        logger.Entries.Should().Contain(e =>
+            e.Level == LogLevel.Debug && e.Message.Contains("Success", StringComparison.Ordinal));
         logger.Entries.Should().NotContain(e => e.Level == LogLevel.Warning);
     }
 
@@ -71,7 +72,8 @@ public class LoggingBehaviorTests
             CancellationToken.None);
 
         logger.Entries.Should().Contain(e => e.Level == LogLevel.Information);
-        logger.Entries.Should().Contain(e => e.Level == LogLevel.Warning && e.Message.Contains("Failure", StringComparison.Ordinal));
+        logger.Entries.Should().Contain(e =>
+            e.Level == LogLevel.Warning && e.Message.Contains("Failure", StringComparison.Ordinal));
         logger.Entries.Should().NotContain(e => e.Level == LogLevel.Debug);
     }
 

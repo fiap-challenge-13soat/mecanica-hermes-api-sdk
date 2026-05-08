@@ -9,7 +9,7 @@ namespace Mecanica.Hermes.Shared.AspNetCore.Endpoints;
 ///     Convenções compartilhadas entre todos os endpoints. Concentra a documentação
 ///     de status codes comuns (<c>ApiProblemDetails</c>) para reduzir duplicação por rota.
 /// </summary>
-[ExcludeFromCodeCoverage(Justification = "Wrappers de Produces<> sobre RouteHandlerBuilder — sem lógica, validado em integração.")]
+[ExcludeFromCodeCoverage(Justification = "Wrappers de Produces<> sobre RouteHandlerBuilder — validado em integração.")]
 public static class EndpointConventions
 {
     /// <summary>
