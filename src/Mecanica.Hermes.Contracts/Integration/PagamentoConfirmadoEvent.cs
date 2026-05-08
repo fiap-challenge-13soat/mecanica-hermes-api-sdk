@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using MassTransit;
 
 namespace Mecanica.Hermes.Contracts.Integration;
@@ -7,6 +8,7 @@ namespace Mecanica.Hermes.Contracts.Integration;
 ///     ou polling). Consumido pela API de OS para promover a ordem para <c>PagamentoConfirmado</c>.
 /// </summary>
 [EntityName("pagamento.confirmado.v1")]
+[ExcludeFromCodeCoverage(Justification = "Record DTO — auto-props; EntityName validado em IntegrationEventNamesTests.")]
 public sealed record PagamentoConfirmadoEvent(
     Guid OrdemDeServicoId,
     Guid PagamentoId,

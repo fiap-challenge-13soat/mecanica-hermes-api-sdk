@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Security.Claims;
 using Mecanica.Hermes.Shared.Core;
 using Microsoft.AspNetCore.Builder;
@@ -64,6 +65,7 @@ public sealed class DevelopmentAuthenticationOptions
     public IReadOnlyList<string> Scopes { get; init; } = ["mechermes-admin/admin", "mechermes-admin/client"];
 }
 
+[ExcludeFromCodeCoverage(Justification = "Wrapper de UseMiddleware — pipeline ASP.NET, validado em integração.")]
 public static class DevelopmentAuthenticationMiddlewareExtensions
 {
     public static IApplicationBuilder UseDevelopmentAuthentication(

@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using MassTransit;
 
 namespace Mecanica.Hermes.Contracts.Integration;
@@ -7,6 +8,7 @@ namespace Mecanica.Hermes.Contracts.Integration;
 ///     Consumido pela API de Pagamentos para iniciar a geração do link no Mercado Pago.
 /// </summary>
 [EntityName("ordem-de-servico.aguardando-pagamento.v1")]
+[ExcludeFromCodeCoverage(Justification = "Record DTO — auto-props; EntityName validado em IntegrationEventNamesTests.")]
 public sealed record OrdemDeServicoAguardandoPagamentoEvent(
     Guid OrdemDeServicoId,
     Guid ClienteId,

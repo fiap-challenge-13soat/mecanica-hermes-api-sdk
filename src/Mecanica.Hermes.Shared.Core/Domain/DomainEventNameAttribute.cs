@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Mecanica.Hermes.Shared.Core.Domain;
 
 /// <summary>
@@ -7,6 +9,7 @@ namespace Mecanica.Hermes.Shared.Core.Domain;
 ///     de namespace ou renomeação de assembly.
 /// </summary>
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]
+[ExcludeFromCodeCoverage(Justification = "Atributo declarativo — apenas armazena o Name.")]
 public sealed class DomainEventNameAttribute(string name) : Attribute
 {
     /// <summary>Nome lógico e imutável do evento — ex: <c>"ordem-de-servico.criado.v1"</c>.</summary>

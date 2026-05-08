@@ -4,15 +4,22 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk" />
         <PackageReference Include="xunit" />
         <PackageReference Include="xunit.runner.visualstudio" />
         <PackageReference Include="FluentAssertions" />
+        <PackageReference Include="Moq" />
         <PackageReference Include="coverlet.collector" />
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\..\src\Mecanica.Hermes.Shared.Core\Mecanica.Hermes.Shared.Core.csproj" />
+        <ProjectReference Include="..\..\src\Mecanica.Hermes.Shared.Application\Mecanica.Hermes.Shared.Application.csproj" />
+        <ProjectReference Include="..\..\src\Mecanica.Hermes.Shared.AspNetCore\Mecanica.Hermes.Shared.AspNetCore.csproj" />
         <ProjectReference Include="..\..\src\Mecanica.Hermes.Contracts\Mecanica.Hermes.Contracts.csproj" />
     </ItemGroup>
 

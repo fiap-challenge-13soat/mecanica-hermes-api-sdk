@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using MassTransit;
 
 namespace Mecanica.Hermes.Contracts.Integration;
@@ -7,6 +8,7 @@ namespace Mecanica.Hermes.Contracts.Integration;
 ///     Consumido pela API de OS, que reverte a ordem para <c>ManutencaoFinalizada</c>.
 /// </summary>
 [EntityName("pagamento.recusado.v1")]
+[ExcludeFromCodeCoverage(Justification = "Record DTO — auto-props; EntityName validado em IntegrationEventNamesTests.")]
 public sealed record PagamentoRecusadoEvent(
     Guid OrdemDeServicoId,
     Guid PagamentoId,

@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Mecanica.Hermes.Shared.Core;
 
 /// <summary>
@@ -5,6 +7,7 @@ namespace Mecanica.Hermes.Shared.Core;
 ///     <c>ASPNETCORE_ENVIRONMENT</c>). Centralizados no SDK para que qualquer
 ///     camada possa referenciá-los sem duplicação cross-repo.
 /// </summary>
+[ExcludeFromCodeCoverage(Justification = "Constantes — sem lógica testável.")]
 public static class EnvironmentNames
 {
     public const string Development = "Development";
