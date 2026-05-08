@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat code coverage">
+        <Configuration>
+          <Format>cobertura,opencover</Format>
+          <ExcludeByFile>**/obj/**,**/bin/**,**/tests/**</ExcludeByFile>
+          <ExcludeByAttribute>Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute,ExcludeFromCodeCoverageAttribute</ExcludeByAttribute>
+          <Exclude>[*Tests]*</Exclude>
+          <Include>[Mecanica.Hermes.Shared.Core]*,[Mecanica.Hermes.Shared.Application]*,[Mecanica.Hermes.Shared.AspNetCore]*,[Mecanica.Hermes.Shared.Observability]*,[Mecanica.Hermes.Shared.MassTransit]*,[Mecanica.Hermes.Contracts]*</Include>
+          <SkipAutoProps>true</SkipAutoProps>
+          <UseSourceLink>false</UseSourceLink>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>

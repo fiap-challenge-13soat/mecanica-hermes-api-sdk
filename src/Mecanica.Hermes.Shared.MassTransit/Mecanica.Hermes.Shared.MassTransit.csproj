@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>Mecanica.Hermes.Shared.MassTransit</PackageId>
+        <Description>Configurações compartilhadas de MassTransit: bus factory, ConfigureSaga genérico, message publisher adapter (Tier 2 — em construção).</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MassTransit" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Mecanica.Hermes.Shared.Application\Mecanica.Hermes.Shared.Application.csproj" />
+    </ItemGroup>
+</Project>
