@@ -14,7 +14,7 @@ SDK compartilhado para os microsserviços do ecossistema Mecânica Hermes (`meca
 ## Pacotes
 
 | Pacote | Dependências externas | Conteúdo |
-|---|---|---|
+| --- | --- | --- |
 | `Mecanica.Hermes.Shared.Core` | nenhuma | `Result<T>`, `BaseDomain`, `AggregateRoot`, `IDomainEvent`, `IUnitOfWork`, `PaginationParams`, `PagedResult` |
 | `Mecanica.Hermes.Shared.Application` | MediatR | `IAsyncCommand`, `IAsyncMessagePublisher`, `AsyncCommandHandler`, `LoggingBehavior` |
 | `Mecanica.Hermes.Shared.AspNetCore` | ASP.NET Core, FluentValidation, Serilog | `CorrelationIdMiddleware`, `DevelopmentAuthenticationMiddleware`, `ValidationFilter<T>`, `ApiProblemDetails`, `EndpointConventions`, `HealthCheckTags` |

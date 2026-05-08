@@ -8,7 +8,7 @@ This repository is **one of five** in the Mecânica Hermes ecosystem. They live 
 `C:\git\mecanica-hermes\` (or equivalent). When working here, keep in mind:
 
 | Repo | Role | Key tech |
-|---|---|---|
+| --- | --- | --- |
 | `mecanica-hermes-shared-sdk` | **This repo** — 6 pacotes NuGet em GitHub Packages | .NET 10, MassTransit.Abstractions |
 | `mecanica-hermes-api-ordem-servico` | Orquestra ordens de serviço | .NET 10, PostgreSQL, RabbitMQ |
 | `mecanica-hermes-cadastros` | Cadastros de Clientes e Produtos | .NET 10, PostgreSQL |
@@ -69,7 +69,7 @@ Mecanica.Hermes.Contracts             (independente; só MassTransit.Abstraction
 ### Pacotes em detalhe
 
 | Pacote | Conteúdo | Dependências externas |
-|---|---|---|
+| --- | --- | --- |
 | `Mecanica.Hermes.Shared.Core` | `Result<T>`, `BaseDomain`, `AggregateRoot`, `IDomainEvent`, `DomainEventNameAttribute`, `DomainClock`, `IUnitOfWork`, `ConcurrencyConflictException`, `PaginationParams`, `PagedResult` | nenhuma |
 | `Mecanica.Hermes.Shared.Application` | `IAsyncCommand`, `IAsyncMessagePublisher`, `AsyncCommandHandler`, `LoggingBehavior` | MediatR, Microsoft.Extensions.Logging.Abstractions |
 | `Mecanica.Hermes.Shared.AspNetCore` | `CorrelationIdMiddleware`, `DevelopmentAuthenticationMiddleware`, `MiddlewareExtensions`, `ValidationFilter<T>`, `ApiProblemDetails`, `EndpointConventions`, `HealthCheckTags` | ASP.NET Core, FluentValidation, Serilog |
@@ -93,7 +93,7 @@ Mecanica.Hermes.Contracts             (independente; só MassTransit.Abstraction
 7 contratos cross-service em `Mecanica.Hermes.Contracts`. Todos versionados com sufixo `.v1`:
 
 | `EntityName` | Publisher | Consumer(s) |
-|---|---|---|
+| --- | --- | --- |
 | `ordem-de-servico.aguardando-aprovacao.v1` | OS | Cadastros |
 | `orcamento-aprovado-pelo-cliente.v1` | Cadastros | OS |
 | `orcamento-rejeitado-pelo-cliente.v1` | Cadastros | OS |
@@ -121,7 +121,7 @@ Detalhes em `docs/versioning.md`.
 ## CI/CD (4 workflows)
 
 | Workflow | Trigger | O quê |
-|---|---|---|
+| --- | --- | --- |
 | `build-and-tests-ci.yml` | push `main`/`feature/**`, PR | restore + build + test + pack preview, upload artifact |
 | `format-ci.yml` | push `main`, PR | `dotnet format whitespace/style/analyzers --verify-no-changes` + line-length check |
 | `sonarqube-ci.yml` | push `main`, PR | SonarCloud (project key `fiap-challenge-13soat_mecanica-hermes-shared-sdk`) |
@@ -165,7 +165,7 @@ Detalhes em `docs/consuming.md`.
 
 Suíte de **smoke tests** em `tests/Mecanica.Hermes.Shared.Tests/` — 22 testes:
 
-- `Core/ResultTests` (6 tests) — Result/Result<T> sucesso/falha/status codes
+- `Core/ResultTests` (6 tests) — `Result/Result<T>` sucesso/falha/status codes
 - `Core/PaginationParamsTests` (8 tests via `Theory`) — coerce de Page/PageSize, cálculo de Skip
 - `Contracts/IntegrationEventNamesTests` (~8 tests) — garante que os 7 EntityNames `.v1` não
   mudaram (smoke contra renomeação acidental)
