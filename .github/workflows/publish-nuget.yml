@@ -61,8 +61,10 @@ jobs:
           retention-days: 90
 
       - name: Publish to GitHub Packages
+        env:
+          NUGET_API_KEY: ${{ secrets.GITHUB_TOKEN }}
         run: |
           dotnet nuget push "./artifacts/*.nupkg" \
             --source "https://nuget.pkg.github.com/fiap-challenge-13soat/index.json" \
-            --api-key "${{ secrets.GITHUB_TOKEN }}" \
+            --api-key "$NUGET_API_KEY" \
             --skip-duplicate
