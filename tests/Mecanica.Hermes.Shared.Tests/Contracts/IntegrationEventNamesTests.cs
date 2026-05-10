@@ -4,7 +4,7 @@ using Mecanica.Hermes.Contracts.Integration;
 namespace Mecanica.Hermes.Shared.Tests.Contracts;
 
 /// <summary>
-///     Garante que os 7 contratos cross-service têm o EntityName canônico esperado.
+///     Garante que os 8 contratos cross-service têm o EntityName canônico esperado.
 ///     Quebrar esses nomes é breaking change e exige bump major do pacote Contracts.
 /// </summary>
 public class IntegrationEventNamesTests
@@ -12,6 +12,7 @@ public class IntegrationEventNamesTests
     [Theory]
     [InlineData(typeof(OrdemDeServicoAguardandoAprovacaoEvent), "ordem-de-servico.aguardando-aprovacao.v1")]
     [InlineData(typeof(OrdemDeServicoAguardandoPagamentoEvent), "ordem-de-servico.aguardando-pagamento.v1")]
+    [InlineData(typeof(OrdemDeServicoCanceladaEvent), "ordem-de-servico.cancelada.v1")]
     [InlineData(typeof(OrcamentoAprovadoPeloClienteEvent), "orcamento.aprovado-pelo-cliente.v1")]
     [InlineData(typeof(OrcamentoRejeitadoPeloClienteEvent), "orcamento.rejeitado-pelo-cliente.v1")]
     [InlineData(typeof(PagamentoConfirmadoEvent), "pagamento.confirmado.v1")]
